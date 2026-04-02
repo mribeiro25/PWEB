@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.caixa {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: gray;
+}
+
+/* Texto padrão */
+h2::before {
+  content: "Cinza";
+  color: white;
+  font-size: 2rem;
+}
+
+/* até 420px */
+@media (max-width: 420px) {
+  .caixa {
+    background-color: gray;
+  }
+
+  h2::before {
+    content: "Cinza";
+  }
+}
+
+/* 421px até 768px */
+@media (min-width: 421px) and (max-width: 768px) {
+  .caixa {
+    background-color: orange;
+  }
+
+  h2::before {
+    content: "Laranja";
+  }
+}
+
+/* 769px até 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .caixa {
+    background-color: magenta;
+  }
+
+  h2::before {
+    content: "Rosa";
+  }
+}
+
+/* 1025px até 1080px */
+@media (min-width: 1025px) and (max-width: 1080px) {
+  .caixa {
+    background-color: lightcoral;
+  }
+
+  h2::before {
+    content: "Salmão";
+  }
+}
+
+/* 1081px até 1366px */
+@media (min-width: 1081px) and (max-width: 1366px) {
+  .caixa {
+    background-color: slateblue;
+  }
+
+  h2::before {
+    content: "Roxo";
+  }
+}
+
+/* 1367px até 1920px */
+@media (min-width: 1367px) and (max-width: 1920px) {
+  .caixa {
+    background-color: gold;
+  }
+
+  h2::before {
+    content: "Amarelo";
+  }
+}
+
+/* maior que 1920px */
+@media (min-width: 1921px) {
+  .caixa {
+    background-color: green;
+  }
+
+  h2::before {
+    content: "Verde";
+  }
+}
