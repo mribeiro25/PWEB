@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa Filme</title>
+</head>
+<body>
+
+<h2>Resultado da Pesquisa</h2>
+<button onclick="iniciarPesquisa()">Iniciar Pesquisa</button>
+
+<pre id="resultado"></pre>
+
+<script>
+function iniciarPesquisa() {
+
+    let totalPessoas = Number(prompt("Quantas pessoas participarão da pesquisa?"));
+
+    let somaIdades = 0;
+    let maiorIdade = 0;
+    let menorIdade = 999;
+
+    let pessimo = 0;
+    let otimoBom = 0;
+
+    let mulheres = 0;
+    let homens = 0;
+    let outros = 0;
+
+    for (let i = 1; i <= totalPessoas; i++) {
+
+        let idade = Number(prompt(`Pessoa ${i} - Idade:`));
+        let sexo = prompt(`Pessoa ${i} - Sexo (feminino, masculino, outros):`).toLowerCase();
+        let opiniao = Number(prompt(`Pessoa ${i} - Opinião (4=ótimo, 3=bom, 2=regular, 1=péssimo):`));
+
+        somaIdades += idade;
+
+        if (idade > maiorIdade) maiorIdade = idade;
+        if (idade < menorIdade) menorIdade = idade;
+
+        if (opiniao === 1) pessimo++;
+        if (opiniao === 3 || opiniao === 4) otimoBom++;
+
+        if (sexo === "feminino") mulheres++;
+        else if (sexo === "masculino") homens++;
+        else outros++;
+    }
+
+    let mediaIdade = somaIdades / totalPessoas;
+    let porcentagemOtimoBom = (otimoBom / totalPessoas) * 100;
+
+    let resultado = `
+Média de idade: ${mediaIdade.toFixed(2)}
+Pessoa mais velha: ${maiorIdade}
+Pessoa mais nova: ${menorIdade}
+Quantidade de pessoas que responderam péssimo: ${pessimo}
+Porcentagem de ótimo e bom: ${porcentagemOtimoBom.toFixed(2)}%
+Mulheres: ${mulheres}
+Homens: ${homens}
+Outros: ${outros}
+    `;
+
+    document.getElementById("resultado").textContent = resultado;
+}
+</script>
+
+</body>
+</html>
