@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 9</title>
+</head>
+<body>
+
+<h2>Atividade 9 - Funções</h2>
+<button onclick="executar()">Escolher Função</button>
+
+<pre id="saida"></pre>
+
+<script src="funcoes.js"></script>
+
+<script>
+function executar() {
+
+    let opcao = Number(prompt(
+        "Escolha a função:\n" +
+        "1 - Maior de 3 números\n" +
+        "2 - Ordem crescente\n" +
+        "3 - Palíndromo\n" +
+        "4 - Subconjunto\n" +
+        "5 - Dia da semana"
+    ));
+
+    let resultado = "";
+
+    switch(opcao) {
+
+        case 1:
+            let n1 = Number(prompt("Digite o primeiro número:"));
+            let n2 = Number(prompt("Digite o segundo número:"));
+            let n3 = Number(prompt("Digite o terceiro número:"));
+
+            resultado = "Maior número: " + maiorNumero(n1, n2, n3);
+            break;
+
+        case 2:
+            let o1 = Number(prompt("Digite o primeiro número:"));
+            let o2 = Number(prompt("Digite o segundo número:"));
+            let o3 = Number(prompt("Digite o terceiro número:"));
+
+            resultado = "Ordem crescente: " + ordenarCrescente(o1, o2, o3);
+            break;
+
+        case 3:
+            let texto = prompt("Digite uma palavra/frase:");
+
+            resultado = "É palíndromo? " + ehPalindromo(texto);
+            break;
+
+        case 4:
+            let p1 = prompt("Digite a primeira palavra:");
+            let p2 = prompt("Digite a segunda palavra:");
+
+            resultado = verificarSubconjunto(p1, p2);
+            break;
+
+        case 5:
+            let data = prompt("Digite a data (YYYY-MM-DD):");
+
+            resultado = "Dia da semana: " + diaDaSemana(data);
+            break;
+
+        default:
+            resultado = "Opção inválida!";
+    }
+
+    document.getElementById("saida").textContent = resultado;
+}
+</script>
+
+</body>
+</html>
