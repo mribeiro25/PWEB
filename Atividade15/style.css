@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(135deg, #dff7ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina {
+  width: 100%;
+  max-width: 760px;
+  padding: 30px;
+}
+
+.cartao-formulario {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 90, 120, 0.25);
+  border-top: 10px solid #009bc2;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #007895;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+.linha {
+  height: 3px;
+  width: 90px;
+  background-color: #00bcd4;
+  margin: 18px auto 30px auto;
+  border-radius: 10px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #005e73;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  border: 2px solid #b7e6ef;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  outline: none;
+  background-color: #f7fdff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #00a8cc;
+  background-color: #ffffff;
+}
+
+textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+.pesquisa {
+  margin-top: 25px;
+  padding: 22px;
+  background-color: #eefbff;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.pesquisa h2 {
+  margin: 0 0 10px 0;
+  color: #007895;
+}
+
+.pesquisa p {
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.opcoes label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #333333;
+  font-weight: normal;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-enviar {
+  background-color: #009bc2;
+  color: white;
+}
+
+.btn-limpar {
+  background-color: #e4e4e4;
+  color: #333333;
+}
+
+button:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
